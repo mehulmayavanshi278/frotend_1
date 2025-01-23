@@ -16,43 +16,43 @@ export default function Home() {
       onBoardThrough: "instagram",
     },
   ];
-  const data = [
-    {
-      id: 1,
-      name: "John Doe",
-      age: 28,
-      email: "johndoe@example.com",
-      through: "instagram",
-    },
-    {
-      id: 2,
-      name: "Jane Smith",
-      age: 34,
-      email: "janesmith@example.com",
-      through: "facebook",
-    },
-    {
-      id: 3,
-      name: "Samuel Green",
-      age: 25,
-      email: "samuelgreen@example.com",
-      through: "youtube",
-    },
-    {
-      id: 4,
-      name: "Alice Brown",
-      age: 30,
-      email: "alicebrown@example.com",
-      through: "instagram",
-    },
-    {
-      id: 5,
-      name: "Bob White",
-      age: 40,
-      email: "bobwhite@example.com",
-      through: "instagram",
-    },
-  ];
+  // const data = [
+  //   {
+  //     id: 1,
+  //     name: "John Doe",
+  //     age: 28,
+  //     email: "johndoe@example.com",
+  //     through: "instagram",
+  //   },
+  //   {
+  //     id: 2,
+  //     name: "Jane Smith",
+  //     age: 34,
+  //     email: "janesmith@example.com",
+  //     through: "facebook",
+  //   },
+  //   {
+  //     id: 3,
+  //     name: "Samuel Green",
+  //     age: 25,
+  //     email: "samuelgreen@example.com",
+  //     through: "youtube",
+  //   },
+  //   {
+  //     id: 4,
+  //     name: "Alice Brown",
+  //     age: 30,
+  //     email: "alicebrown@example.com",
+  //     through: "instagram",
+  //   },
+  //   {
+  //     id: 5,
+  //     name: "Bob White",
+  //     age: 40,
+  //     email: "bobwhite@example.com",
+  //     through: "instagram",
+  //   },
+  // ];
 
   const [Data, setData] = useState<any[]>([]);
 
@@ -86,7 +86,7 @@ export default function Home() {
                       sx={{ fontSize: "40px", padding: 0 }}
                     />
                     <p className="relative -bottom-2 text-[15px] align-bottom">
-                      {data?.length}
+                      {Data?.length}
                     </p>
                   </div>
                 </div>
