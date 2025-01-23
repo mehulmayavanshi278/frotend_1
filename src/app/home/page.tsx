@@ -86,7 +86,7 @@ export default function Home() {
                       sx={{ fontSize: "40px", padding: 0 }}
                     />
                     <p className="relative -bottom-2 text-[15px] align-bottom">
-                      13
+                      {data?.length}
                     </p>
                   </div>
                 </div>
