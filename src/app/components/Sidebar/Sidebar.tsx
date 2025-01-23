@@ -23,18 +23,18 @@ const menuitems:menuitem[] = [
     name:'checkedin',
     icon:<AutoAwesomeMosaicIcon/>
   },
-  {
-    name: "search",
-    icon: <SearchIcon />,
-  },
-  {
-    name: "saved",
-    icon: <TryIcon />,
-  },
-  {
-    name: "Notification",
-    icon: <CircleNotificationsIcon />,
-  },
+  // {
+  //   name: "search",
+  //   icon: <SearchIcon />,
+  // },
+  // {
+  //   name: "saved",
+  //   icon: <TryIcon />,
+  // },
+  // {
+  //   name: "Notification",
+  //   icon: <CircleNotificationsIcon />,
+  // },
 ];
 
 function Sidebar() {

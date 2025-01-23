@@ -169,14 +169,11 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="bg-red-300 mt-5">
+        <div className=" mt-5">
           <div className="overflow-x-auto bg-white rounded-lg shadow-lg p-5">
             <table className="min-w-full table-auto">
               <thead className="bg-gray-200">
                 <tr>
-                  <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700">
-                    ID
-                  </th>
                   <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700">
                     Number
                   </th>
