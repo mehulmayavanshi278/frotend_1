@@ -188,7 +188,7 @@ export default function Home() {
               <tbody>
                 {Data?.map((row, i) => (
                   <tr key={i} className="border-b hover:bg-gray-100">
-                    <td className="px-6 py-3 text-sm text-gray-700">{i + 1}</td>
+                  
                     <td className="px-6 py-3 text-sm text-gray-700">
                       {row?.number}
                     </td>
