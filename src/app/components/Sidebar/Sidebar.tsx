@@ -23,18 +23,11 @@ const menuitems:menuitem[] = [
     name:'checkedin',
     icon:<AutoAwesomeMosaicIcon/>
   },
-  // {
-  //   name: "search",
-  //   icon: <SearchIcon />,
-  // },
-  // {
-  //   name: "saved",
-  //   icon: <TryIcon />,
-  // },
-  // {
-  //   name: "Notification",
-  //   icon: <CircleNotificationsIcon />,
-  // },
+  {
+    name: "scan",
+    icon: <SearchIcon />,
+  },
+
 ];
 
 function Sidebar() {
@@ -63,7 +56,7 @@ function Sidebar() {
             return (
               <>
                 {elm.name.includes('Notification') ?  
-                <div key={elm.name} className={`w-full ${elm.name===activeTab ? ' text-blue-600' : ''}`}>
+                <div key={id+elm.name+id} className={`w-full ${elm.name===activeTab ? ' text-blue-600' : ''}`}>
                   <Link href={`/${elm.name}`}  className={`${elm.name===activeTab ? 'bg-blue-100 text-blue-400' : ''} flex flex-col items-center cursor-pointer relative text-[gray] p-2 rounded-3xl hover:bg-blue-100 transition-colors duration-200 px-2 w-full`}
                    onClick={()=>{handleClick(elm.name);}}
                   >
@@ -77,8 +70,8 @@ function Sidebar() {
                   </Link>
                 </div> 
                 :
-
-                <Link href={`/${elm.name}`}  key={elm.name} className={`w-full ${elm.name===activeTab ? ' text-blue-600' : ''}`}>
+               <div key={id+elm.name+id} className={`w-full ${elm.name===activeTab ? ' text-blue-600' : ''}`}>
+                <Link href={`/${elm.name}`}   className={`w-full ${elm.name===activeTab ? ' text-blue-600' : ''}`}>
                   <div className={` ${elm.name===activeTab ? 'bg-blue-100 text-blue-400' : ''} flex flex-col items-center cursor-pointer text-[gray] p-2 rounded-3xl hover:bg-blue-100 transition-colors duration-200 px-2 w-full`}
                   onClick={()=>{handleClick(elm.name)}}>
                     {elm.icon}
@@ -87,6 +80,7 @@ function Sidebar() {
                     {elm.name}
                   </p>
                 </Link>
+                </div>
                 }
               </>
             );

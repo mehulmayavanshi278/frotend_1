@@ -58,14 +58,16 @@ export default function Home() {
 
   const getOnboardUser = async () => {
     try {
-      const res = await axios.get('https://whatsapp-boat.onrender.com/user');
+      // console.log(process.env.NEXT_PUBLIC_LOCAL_BASEURL);
+      // console.log(process.env.NEXT_PUBLIC_SERVER_BASEURL)
+      const res = await axios.get(process.env.NEXT_PUBLIC_LOCAL_BASEURL + '/user');
       if(res.status === 200){
         console.log(res.data);
         setData(res.data);
       }
     } catch (err) {
       console.log(err);
-      alert("Something went wrong");
+      // alert("Something went wrong");
     }
   };
   useEffect(() => {
@@ -178,10 +180,10 @@ export default function Home() {
                     Number
                   </th>
                   <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700">
-                    Channel
+                    name
                   </th>
                   <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700">
-                    Through
+                    email
                   </th>
                 </tr>
               </thead>
@@ -190,14 +192,14 @@ export default function Home() {
                   <tr key={i} className="border-b hover:bg-gray-100">
                   
                     <td className="px-6 py-3 text-sm text-gray-700">
-                      {row?.number}
+                      {row?.phone}
                     </td>
                     <td className="px-6 py-3 text-sm text-gray-700">
-                      {row?.channel}
+                      {row?.name}
                     </td>
 
                     <td className="px-6 py-3 text-sm text-gray-700">
-                      {row?.onBoardThrough}
+                      {row?.email}
                     </td>
                   </tr>
                 ))}
